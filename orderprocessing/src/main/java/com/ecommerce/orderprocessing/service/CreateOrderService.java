@@ -85,8 +85,6 @@ public class CreateOrderService {
 		
 		String uniqueAddressId = UUID.randomUUID().toString();
 		
-		String uniqueCustomerId = UUID.randomUUID().toString();
-		
 		String uniqueOrderId = UUID.randomUUID().toString();
 		
 		String uniqueShippingMethodId = UUID.randomUUID().toString();
@@ -95,13 +93,13 @@ public class CreateOrderService {
 		order.setAddress_id(uniqueAddressId);
 		order.setBilling_Address_id(uniqueBillingAddressId);
 		order.setCreate_TS(d1.toString());
-		order.setCustomer_id(uniqueCustomerId);
+		order.setCustomer_id(apiRequest.getCustomer_id());
 		order.setInserted_By(user);
 		order.setItem_id(uniqueItemId);
 		order.setItem_Qty(apiRequest.getItem_Qty());
 		order.setOrder_id(uniqueOrderId);
 		order.setShipping_Method_id(uniqueShippingMethodId);
-		order.setStatus(apiRequest.getStatus());
+		order.setStatus("NEW");
 		order.setUpdate_TS(d1.toString());
 		order.setUpdated_By(user);
 		
@@ -141,7 +139,8 @@ public class CreateOrderService {
 		shippingRepo.save(shipping);
 		
 		ResponseOrder responseOrder = new ResponseOrder();
-		
+		responseOrder.setMessage("Created Order  Successfully");
+		responseOrder.setOrderId(uniqueOrderId);
 		return responseOrder;
 	}
 	
