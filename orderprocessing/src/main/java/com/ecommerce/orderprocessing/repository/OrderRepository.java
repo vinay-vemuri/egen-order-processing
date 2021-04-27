@@ -8,5 +8,5 @@ import com.ecommerce.orderprocessing.tables.OrderTotal;
 
 @Repository
 public interface OrderRepository extends JpaRepository<Order, String> {
-
+	
 }

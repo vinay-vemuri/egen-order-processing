@@ -40,9 +40,7 @@ public class FindOrdersService {
 	public ShippingMethodRepository shippingMethodRepository;
 	
 	public RequestOrder getOrderDetailsById(String id) {
-		
 		RequestOrder ro = new RequestOrder();
-		
 		Order od = orderRepo.findById(id).get();
 		ro.setOrder_id(od.getOrder_id());
 		ro.setCustomer_id(od.getCustomer_id());
@@ -52,7 +50,6 @@ public class FindOrdersService {
 		ro.setBilling_Address_id(od.getBilling_Address_id());
 		ro.setItem_id(od.getItem_id());
 		ro.setItem_Qty(od.getItem_Qty());
-		
 		BillingAddress ba = billingAddressRepo.findById(od.getBilling_Address_id()).get();
 		ro.setAddress_line_1(ba.getAddress_line_1());
 		ro.setAddress_line_2(ba.getAddress_line_2());

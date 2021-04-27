@@ -16,8 +16,9 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 
-@SpringBootApplication
+
 @EnableSwagger2
+@SpringBootApplication
 public class OrderprocessingApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(OrderprocessingApplication.class, args);
