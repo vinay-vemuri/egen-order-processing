@@ -23,7 +23,7 @@ public class CreateOrderController {
 	
 	Logger log = LogManager.getLogger(FindOrdersController.class);
 	
-	@RequestMapping(value = "/createOrder", method = RequestMethod.POST)
+	@RequestMapping(value = "/orderservice/createOrder", method = RequestMethod.POST)
 	@ResponseBody
 	public ResponseOrder createOrder(@RequestBody RequestOrder apiRequest) {
 	

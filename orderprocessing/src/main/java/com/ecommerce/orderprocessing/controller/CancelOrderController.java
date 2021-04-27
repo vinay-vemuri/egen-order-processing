@@ -22,7 +22,7 @@ public class CancelOrderController {
 	
 	Logger log = LogManager.getLogger(CancelOrderController.class);
 	
-	@RequestMapping(value = "/cancelOrder", method = RequestMethod.POST)
+	@RequestMapping(value = "/orderservice/cancelOrder", method = RequestMethod.POST)
 	public @ResponseBody ResponseOrder cancelOrder(@RequestBody RequestOrder apiRequest) {
 	
 		ResponseOrder response = cancelOrderService.cancelOrder(apiRequest);
