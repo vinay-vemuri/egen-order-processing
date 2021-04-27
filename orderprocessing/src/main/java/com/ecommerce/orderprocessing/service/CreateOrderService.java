@@ -142,6 +142,7 @@ public class CreateOrderService {
 		ResponseOrder responseOrder = new ResponseOrder();
 		responseOrder.setMessage("Created Order  Successfully");
 		responseOrder.setOrderId(uniqueOrderId);
+		responseOrder.setCustomer_id(apiRequest.getCustomer_id());
 		return responseOrder;
 	}
 	
