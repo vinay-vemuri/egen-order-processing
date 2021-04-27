@@ -4,7 +4,7 @@ Steps to run the application:
 
 Run this command to build the docker image:
   1.  Clone the repository: https://github.com/vinay-vemuri/egen-order-processing
-  2.	Open terminal in the project directory
+  2.	Open terminal in the project directory, navigate to orderprocessing directory where docker-compose.yml is present
   3.	Run docker-compose up
  
 Application Documentation/Swagger URL:
