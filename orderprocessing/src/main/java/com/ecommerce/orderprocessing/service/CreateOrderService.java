@@ -109,6 +109,7 @@ public class CreateOrderService {
 		orderTotal.setSubtotal(apiRequest.getSubtotal());
 		orderTotal.setTax(apiRequest.getTax());
 		orderTotal.setTotal_amount(apiRequest.getTotal_amount());
+		orderTotal.setOrder_id(uniqueOrderId);
 		
 		orderTotalRepo.save(orderTotal);		
 		

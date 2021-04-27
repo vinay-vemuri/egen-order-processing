@@ -33,6 +33,29 @@ public class RequestOrder {
 	private String No_of_Cards_Used;
 	private String Payment_confirmation_number;
 	private String Payment_method;
+	
+	public RequestOrder() {
+		
+	}
+	
+	public RequestOrder(String test) {
+		this.setAddress_line_1("");
+		this.setAddress_line_2("");
+		this.setCity("");
+		this.setState("");
+		this.setZip("");
+		this.setItem_name("");
+		this.setItem_Price("");
+		this.setCustomer_id("");
+		this.setItem_Qty("");
+		this.setSubtotal("");
+		this.setTax("");
+		this.setTotal_amount("");
+		this.setNo_of_Cards_Used("");
+		this.setPayment_method("");
+		this.setMethod("");
+		this.setShipping_Charges("");
+	}
 
 	public String getBilling_Address_id() {
 		return Billing_Address_id;
