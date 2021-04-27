@@ -2,7 +2,7 @@ EGEN ORDER PROCESSING
 
 Steps to run the application:
 
-Run this command to build the docker image 
+Run this command to build the docker image:
   1.  Clone the repository: https://github.com/vinay-vemuri/egen-order-processing
   2.	Open terminal in the project directory
   3.	Run docker-compose up
