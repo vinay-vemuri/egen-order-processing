@@ -24,8 +24,8 @@ public class FindOrdersController {
 	@RequestMapping(value="/orderservice/getOrderById/{id}",method=RequestMethod.GET, produces="application/json")
 	public @ResponseBody RequestOrder getOrderById(@PathVariable("id") String id) {
 		try {
-		RequestOrder ro = findOrdersService.getOrderDetailsById(id);
-		return ro;
+			RequestOrder ro = findOrdersService.getOrderDetailsById(id);
+			return ro;
 		} catch(Exception ex) {
 			log.error("Exception occured at getOrderById due to " + ex.getMessage());
 			return null;

@@ -24,9 +24,14 @@ public class CancelOrderController {
 	
 	@RequestMapping(value = "/orderservice/cancelOrder", method = RequestMethod.POST)
 	public @ResponseBody ResponseOrder cancelOrder(@RequestBody RequestOrder apiRequest) {
-	
-		ResponseOrder response = cancelOrderService.cancelOrder(apiRequest);
-		
+		try {
+			ResponseOrder response = cancelOrderService.cancelOrder(apiRequest);
+			return response;
+		} catch(Exception e) {
+			log.error("Exception occured in cancel order", e);
+		}
+		ResponseOrder response = new ResponseOrder();
+		response.setMessage("exception in cancencelling order");;
 		return response;
 	}
 

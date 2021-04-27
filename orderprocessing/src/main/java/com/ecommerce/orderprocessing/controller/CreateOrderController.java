@@ -26,10 +26,14 @@ public class CreateOrderController {
 	@RequestMapping(value = "/orderservice/createOrder", method = RequestMethod.POST)
 	@ResponseBody
 	public ResponseOrder createOrder(@RequestBody RequestOrder apiRequest) {
-	
-		
-		ResponseOrder response = createOrderService.createOrder(apiRequest);
-		
+		try {
+			ResponseOrder response = createOrderService.createOrder(apiRequest);
+			return response;
+		} catch(Exception e) {
+			log.error("Exception occured in create order controller", e);
+		}
+		ResponseOrder response = new ResponseOrder();
+		response.setMessage("exception in creating order");;
 		return response;
 	}
 
