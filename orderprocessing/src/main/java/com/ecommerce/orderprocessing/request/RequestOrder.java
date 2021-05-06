@@ -33,7 +33,17 @@ public class RequestOrder {
 	private String No_of_Cards_Used;
 	private String Payment_confirmation_number;
 	private String Payment_method;
+	private String message;
 	
+	
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
 	public RequestOrder() {
 		
 	}
